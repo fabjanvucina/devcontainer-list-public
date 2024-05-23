@@ -1,0 +1,16 @@
+{
+    "name": "My Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-12",
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "dbaeumer.vscode-eslint"
+    ],
+    "forwardPorts": [3000],
+    "postCreateCommand": "npm install",
+    "runArgs": [
+        "--env",
+        "NODE_ENV=development"
+    ]
+}
